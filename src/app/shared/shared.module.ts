@@ -1,7 +1,10 @@
-import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { CommonModule } from '@angular/common';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
@@ -9,12 +12,15 @@ import { NgModule } from '@angular/core';
   declarations: [
     AboutPageComponent,
     HomePageComponent,
+    SidebarComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ], exports: [
     AboutPageComponent,
     HomePageComponent,
+    SidebarComponent,
   ]
 })
 export class SharedModule { }
