@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
   ],
   providers: [
-    HttpClient,
+    // HttpClient,
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })
